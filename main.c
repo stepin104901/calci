@@ -7,27 +7,6 @@ int num1, num2, choice;
 
 printf("[1] Add\v[2] Subtract\v[3] Multiply\v[4] Divide");
 scanf("%d", &choice);
-int add(int x,int y){
-    int z = x + y;
-    return z;
-}   
-//Subtraction
-int sub(int a,int b){
-    int c = a - b;
-    return  c;
-}   
-//Multiplication
-int mul(int d,int e)
-{
-    int f = d * e;
-    return f;
-}
-//Division
-int Div(int g,int h){
-    int i = g / h;
-    return i;
-}
-
 
 switch(choice){
     
