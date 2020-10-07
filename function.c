@@ -1,18 +1,22 @@
 #include<function.h>
 
-double FindSimple(double principle,double rate,double time)
+int add(int x,int y){
+    int z = x + y;
+    return z;
+}   
+
+int sub(int a,int b){
+    int c = a - b;
+    return  c;
+}   
+
+int mul(int d,int e)
 {
-	
-	double si=principle*rate*time;
-	
-	si=si/100;
-	
-	return si;
+    int f = d * e;
+    return f;
 }
 
-double FindCompound(double P, double R, double T) 
-{
-   double CI= P*(pow(1+(R/100), T));
-   
-   return CI;
+int Div(int g,int h){
+    int i = g / h;
+    return i;
 }
