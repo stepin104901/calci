@@ -3,85 +3,67 @@
 int main()
 {
 	
-double principle,rate,time,simple_intrest;
+int num1, num2, choice;
 
-printf("enter principle");
-printf("\n");
-
-scanf("%lf",&principle);
-
-printf("enter rate of intrest");
-printf("\n");
-
-scanf("%lf",&rate);
-
-printf("enter time in months");
-printf("\n");
-
-scanf("%lf",&time);
-
-//principle value greater than zero
-
-if(principle<=0)
+printf("[1] Add\v[2] Subtract\v[3] Multiply\v[4] Divide");
+scanf("%d", &choice);
+int add(int x,int y){
+    int z = x + y;
+    return z;
+}   
+//Subtraction
+int sub(int a,int b){
+    int c = a - b;
+    return  c;
+}   
+//Multiplication
+int mul(int d,int e)
 {
-	printf("enter enter the value greater than zero");
-	
-	exit(0);
+    int f = d * e;
+    return f;
+}
+//Division
+int Div(int g,int h){
+    int i = g / h;
+    return i;
 }
 
-//rate value greater than zero
 
-if(rate<=0)
-{
-	printf("enter enter the value greater than zero");
-	
-	exit(0);
+switch(choice){
+    
+    case 1:
+        printf("Enter 1st number:\n");
+        scanf("%d", &num1);
+        printf("Enter 2nd number:\n");
+        scanf("%d", &num2);
+        printf("%d", add(num1,num2));
+        break;
+    case 2:
+        printf("Enter 1st number:\n");
+        scanf("%d", &num1);
+        printf("Enter 2nd number:\n");
+        scanf("%d", &num2);
+        printf("%d ", sub(num1,num2));
+        break;
+    case 3:
+        printf("Enter 1st number:\n");
+        scanf("%d", &num1);
+        printf("Enter 2nd number:\n");
+        scanf("%d", &num2);
+        printf("%d", mul(num1,num2));
+        break;
+    case 4:
+        printf("Enter 1st number:\n");
+        scanf("%d", &num1);
+        printf("Enter 2nd number:\n");
+        scanf("%d", &num2);
+        printf("%d", Div(num1,num2));
+        break;
+    default:
+        printf("That is not a valid choice.");
+        break;
 }
 
-//time value greater than zero
-
-if(time<=0)
-{
-	printf("enter enter the value greater than zero");
-	
-	exit(0);
+    
 }
 
-printf("enter 1 for simple intrest");
-
-printf("\n");
-
-printf("enter 2 for compound intrest");
-
-printf("\n");
-
-int enter;
-
-scanf("%d",&enter);
-
-if(enter==1)
-{
-	
-	double SI=FindSimple(principle,rate,time);
-	
-	printf("%lf",SI);
-	
-}
-
-if(enter==2)
-{
-
-double CI=FindCompound(principle,rate,time);
-	
-	printf("%lf",CI);
-}
-
-if(enter>2)
-{
-	printf("please choose the correct value try again");
-	
-	exit(0);
-	
-}
-return 0;
-}
