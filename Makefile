@@ -6,16 +6,16 @@ BUILD = build
 
 # All source code files
 SRC = main.c\
-src/function.c\
+function.c\
 
 # All test source files
-TEST_SRC = src/function.c\
-test/test_function.c
+TEST_SRC = function.c\
+test_function.c
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
 # All include folders with header files
-INC	= -Iinc
+INC	= function.h
 
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
 
